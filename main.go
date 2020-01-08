@@ -11,7 +11,7 @@ import (
 func FetchBooks(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	var books []string
-	books = append(books, "Essential Rumi")
+	books = append(books, "The Essential Rumi")
 	books = append(books, "The book of Why")
 	books = append(books, "When Breathe becomes air")
 	books = append(books, "The Magic")
