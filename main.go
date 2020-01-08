@@ -15,6 +15,8 @@ func FetchBooks(w http.ResponseWriter, r *http.Request) {
 	books = append(books, "The book of Why")
 	books = append(books, "When Breathe becomes air")
 	books = append(books, "The Magic")
+	books = append(books, "The Secret")
+
 
 	response, _ := json.Marshal(books)
 	w.Write(response)
