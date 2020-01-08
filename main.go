@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"log"
 	"net/http"
-
+	"os"
 	"github.com/gorilla/mux"
 )
 
@@ -23,6 +23,6 @@ func FetchBooks(w http.ResponseWriter, r *http.Request) {
 func main() {
 	r := mux.NewRouter()
 	r.HandleFunc("/getbooks", FetchBooks).Methods("GET")
-	log.Printf("Server Started at Port:3000")
-	log.Fatal(http.ListenAndServe(":3000", r))
+	log.Printf("Server Started");
+	log.Fatal(http.ListenAndServe(":" + os.Getenv("PORT"), r))
 }
